@@ -1,10 +1,11 @@
 /* global $ */
 
 function validateDetails(){
-    
+  
     var pin;
     
     pin = document.getElementById("user_pin").value;
+     name = document.getElementById("user_name").value;
     
     if (pin==""){
         alert("Please enter a valid PIN");
@@ -12,9 +13,30 @@ function validateDetails(){
     else if (String(pin).length<4){
         alert("Please make sure your PIN is valid");
         }
+    else if (String(pin).length=4, name==""){
+        alert("Please enter a valid Name")
+    }
+        else{
+            enablebtnPurchase()
+        }
+        
+        
+        var name;
+    
+    
+    
+    if (name==""){
+        alert("Please enter a valid Name");
+        }
+   else if (name!="", String(pin).length<4){
+       alert("Please enter a valid PIN");
+   }
     else{
         enablebtnPurchase();
         }
+        
+       
+        
 }
 
 function enablebtnPurchase(){
@@ -26,19 +48,5 @@ function disablebtnPurchase(){
 }
 
 
-function validateDetails(){
-    
-    var name;
-    
-    name = document.getElementById("user_pin").value;
-    
-    if (name==""){
-        alert("Please enter a valid PIN");
-        }
-    else if (String(name).length<4){
-        alert("Please make sure your PIN is valid");
-        }
-    else{
-        enablebtnPurchase();
-        }
-}
+
+  
