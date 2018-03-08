@@ -57,9 +57,16 @@ function calcSub(){
     
     
     function enablebtnProceed(){
-        $('#btnProceed').prop('disabled', false);
+        var product = document.getElementsByName('product');
+        var proceed = document.getElementById('btnProceed');
+        proceed.disabled = true;
+        
+        
+        for (var i = 0, length = product.length; i < length; i++) {
+            if (product[i].checked) {
+                proceed.disabled = !proceed.disabled;
+            }
+        }
     }
     
-    function disablebtnProceed(){
-        $('#btnProceed').prop('disabled', true);
-    }
+   
