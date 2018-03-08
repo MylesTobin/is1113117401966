@@ -33,9 +33,12 @@ function validateDetails(){
     name = document.getElementById("user_pin").value;
     
     if (name==""){
-        alert("Please enter a valid Name")
-        else{
-            enablebtnPurchase()
+        alert("Please enter a valid PIN");
         }
-    }
+    else if (String(name).length<4){
+        alert("Please make sure your PIN is valid");
+        }
+    else{
+        enablebtnPurchase();
+        }
 }
