@@ -23,62 +23,46 @@ session_start();
         
             <br>
             
-            <form method = "POST" action = "Ebus3.php">
-                
-                <label for="user_pin">
-                     PIN 
-                </label>
-                
-                <input type="password" id="user_pin" placeholder="Card Pin" maxlength="4">
-                
-                
-                <br><br>
-                
-                      <label for="user_name">
-                     Name
-                </label>
-                
-               <input type="password" id="user_name" placeholder="Name" maxlength="20">
-                    
-              <br><br>
-              
-              <label for="user_email">
-                  Email
-              </label>
-              
-              <input type="password" id="user_email" placeholder="Email" maxlength="20"
-              
-              <br><br><br><br>
-          <button type="Submit" id="btnPurchase" disabled> 
-                    Proceed with Purchase 
-                </button>
-                
+            <form action="Ebus3.php" method="POST">
             
+           <div class="validation">
+               <label for="username" class="lblname">
+                Name:
+                <input type="name" id="username" name="username" placeholder="Enter Your Name">
+            </label>
             
-        </form>    
+            <br>
             
-            <button onClick="validateDetails()"> Validate </button>
-        
-        <script type="text/javascript" src="ebus2_validator.js"></script>
-        
-        
-       
+            <label for="useremail" class="lblemail">
+                Email:
+                <input type="email" id="useremail" name="useremail" placeholder="example@gmail.com">
+            </label>
             
-                
-           
-                    
-             
-            </form>
-       
+            <br>
+
+            <label for="userpin" class="lblpin">
+                Pin:&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="pin" id="userpin" name="userpin" placeholder="Enter PIN" maxlength="4" pattern="\d{4}">
+                <br>
+                (Numeric Characters only for PIN)
+            </label>
+            
+            <br>
+            <br>
+            
+            <button class="btnproceed" type="submit" id="btnPurchase" disabled>Proceed with Purchase</button>
+        </form>
         
-         <?php
-        //Set session variables
-        $_SESSION["subtotal"] = $_POST["subtotal"];
-        $_SESSION["vat"] = $_POST["vat"];
-        $_SESSION["total"] = $_POST["total"];
-        $_SESSION["discount"] = $_POST["discount"];
+        <br>
+        
+        <button class="btnvalidate" onClick="validateName()">Validate</button>
+    </div> 
+    </div>
+        <?php  
+        // Set session variables
+          $_SESSION["total"] = $_POST["total"];
+          
         ?>
-        
         
         
         

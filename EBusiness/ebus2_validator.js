@@ -45,7 +45,7 @@ var pin;
         alert("Please enter your PIN.");
     }
     else if (pin.length < 4){
-        alert("Your PIN must be 4 digits, no other characters permitted.");
+        alert("Please enter a valid PIN");
     }
     else{
         enablebtnPurchase()
@@ -66,3 +66,14 @@ function disablebtnPurchase() {
     
     $('#btnPurchase').prop('disabled', true);
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
