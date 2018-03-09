@@ -6,6 +6,7 @@ function validateDetails(){
     
     pin = document.getElementById("user_pin").value;
      name = document.getElementById("user_name").value;
+     email = document.getElementById("user_email").value
     
     if (pin==""){
         alert("Please enter a valid PIN");
@@ -15,6 +16,9 @@ function validateDetails(){
         }
     else if (String(pin).length=4, name==""){
         alert("Please enter a valid Name")
+    }
+    else if (String(pin).length=4, email==""){
+        alert("Please enter a valid Email")
     }
         else{
             enablebtnPurchase()
@@ -31,13 +35,32 @@ function validateDetails(){
    else if (name!="", String(pin).length<4){
        alert("Please enter a valid PIN");
    }
+    
+    else if (name!="", email==""){
+        alert("Please enter a valid Email")
+        
+        
+    }
     else{
         enablebtnPurchase();
         }
         
        
         
-}
+        
+        var email;
+        if (email==""){
+            alert("Please enter a valid Email");
+        }
+        else if (email!="", name==""){
+            alert("Please enter a valid Name")
+        }
+        else if (email!="", pin==""){
+            alert("Please enter a valid PIN")
+        }
+        
+        
+
 
 function enablebtnPurchase(){
      $('#btnPurchase').prop('disabled',false);
