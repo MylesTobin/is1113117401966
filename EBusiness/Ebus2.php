@@ -41,6 +41,14 @@ session_start();
                <input type="password" id="user_name" placeholder="Name" maxlength="20">
                     
               <br><br>
+              
+              <label for="user_email">
+                  Email
+              </label>
+              
+              <input type="password" id="user_email" placeholder="Email" maxlength="20"
+              
+              <br><br><br><br>
           <button type="Submit" id="btnPurchase" disabled> 
                     Proceed with Purchase 
                 </button>
