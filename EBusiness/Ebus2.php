@@ -53,9 +53,9 @@ session_start();
                     Proceed with Purchase 
                 </button>
                 
-            </form>
             
             
+        </form>    
             
             <button onClick="validateDetails()"> Validate </button>
         
